@@ -1,12 +1,13 @@
 import React,{Component} from 'react';
-import {  AsyncStorage,Dimensions,StatusBar,StyleSheet,ImageBackground,KeyboardAvoidingView,Text,TouchableOpacity, Image, View,Alert} from 'react-native';
+import {  AsyncStorage,TextInput, ScrollView,Dimensions,StatusBar,StyleSheet,ImageBackground,KeyboardAvoidingView,Text,TouchableOpacity, Image, View,Alert} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
-import { TextInput, ScrollView } from 'react-native-gesture-handler';
 
 
 let {height, width} = Dimensions.get('window');
 
 class Login extends React.Component{
+
+
 
 render(){
 return(
@@ -32,9 +33,9 @@ return(
                     <View style={styles.PasswordView}>
 
                     <TextInput style={styles.Passwordinput} secureTextEntry={true} placeholder='password' placeholderTextColor='#7b8ea8'/>
-                    <Image source={require('../Images/password.png')} style={{ width:'60%',height:'60%',resizeMode:'contain'}}/>
+                    <Image source={require('../Images/password.png')} style={{ width:'60%',height:'60%',resizeMode:'contain',top:'1%'}}/>
                     </View>
-                    <TouchableOpacity style={styles.loginButton}>
+                    <TouchableOpacity style={styles.loginButton} onPress={()=>this.props.navigation.navigate("AppStack")}>
                         <Text style={styles.loginButtonText}>
                             log in
                         </Text>
@@ -72,7 +73,7 @@ const styles=EStyleSheet.create({
        height:'20%',
        resizeMode:'contain',
        marginTop: '2.5rem',
-       marginLeft: '0.5rem',
+       marginLeft: '0.1rem',
     },
     BottomText:{
        color:'#7b8ea8',

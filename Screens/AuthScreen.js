@@ -31,7 +31,7 @@ return(
     <View style={{flex:4}}></View>
     <View style={{flex:3}}>
     <View style={{flex:1,flexDirection:'row',justifyContent:'space-evenly',marginRight:'10%'}}>
-        <TouchableOpacity style={{backgroundColor:'#3D85C6',width:'35%',height:'35%',justifyContent:'center',borderRadius:2}}>
+        <TouchableOpacity onPress={()=>this.props.navigation.navigate('Signup')} style={{backgroundColor:'#3D85C6',width:'35%',height:'35%',justifyContent:'center',borderRadius:2}}>
             <Text style={styles.signupText}>sign up</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={()=>this.props.navigation.navigate('Login')} style={{right:'18%',backgroundColor:'#FFFFFF',borderColor:'#3D85C6',borderWidth:2,borderRadius:2,justifyContent:'center',width:'35%',height:'35%'}}>
