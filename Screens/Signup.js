@@ -37,6 +37,10 @@ constructor(props){
     this.state={
         status:0,
         password:'',
+        gender:0,
+        studio:0,
+        year:0,
+        month:0
     }
 }
 
@@ -63,11 +67,11 @@ render(){
     const month=[{value:0,label:'exp month'},{value:1,label:'jan'},{value:2,label:'feb'},{value:3,label:'march'},{value:4,label:'april'},{value:5,label:'may'},{value:6,label:'june'},{value:7,label:'july'},{value:8,label:'aug'},{value:9,label:'sep'},{value:10,label:'oct'},{value:11,label:'nov'},{value:12,label:'dec'}]
     const Textinputs1= 
 <View style={{flex:11 }}>
-        <View style={{flex:2,flexDirection:'row',marginHorizontal:'10%'}}>
+        <View style={{flex:2,flexDirection:'row',marginHorizontal:'10%',justifyContent:'space-between'}}>
             <View>
                 <Text style={styles.loginText}>Sign up</Text>
             </View>
-            <View style={{flex:1,flexDirection:'row',justifyContent:'space-evenly',marginLeft:'30%',marginTop:'10%'}}>
+            <View style={{flex:1,flexDirection:'row',justifyContent:'space-evenly',left:'4%',marginLeft:'30%',marginTop:'10%'}}>
                 <Dot active={true}/>
                 <Dot/>
                 <Dot/>
@@ -101,13 +105,13 @@ render(){
                 </View>
                 <View style={styles.halfpicker}>
                     <SelectInput
-                      value ={0}
-                      
+                      value ={this.state.gender}
+                      onSubmitEditing={(value)=>{this.setState({gender:value})}}
                       labelStyle={{color:'#7b8ea8'}}
                       options={options}
                       style={{}}
                     />
-                <Image source={require('../Images/cross.png')} style={styles.icon}/>
+                <Image source={require('../Images/drop-down.png')} style={styles.icon}/>
 
                 </View>
            </View>
@@ -128,7 +132,7 @@ const Textinputs2=
             <View>
                  <Text style={styles.loginText}>Sign up</Text>
             </View>
-            <View style={{flex:1,flexDirection:'row',justifyContent:'space-evenly',marginLeft:'30%',marginTop:'10%'}}>
+            <View style={{flex:1,flexDirection:'row',justifyContent:'space-evenly',left:'4%',marginLeft:'30%',marginTop:'10%'}}>
                 <Dot />
                 <Dot active={true}/>
                 <Dot/>
@@ -137,12 +141,14 @@ const Textinputs2=
     <View style={{flex:7,alignItems:'center'}}>
         <View style={styles.inputView}>
                    <SelectInput
-                      value ={0}
-                      
+                      value ={this.state.studio}
+                      onSubmitEditing={(value)=>{this.setState({studio:value})}}
                       labelStyle={{color:'#7b8ea8'}}
                       options={options2}
                       style={{}}
                     />
+                 <Image source={require('../Images/drop-down.png')} style={[styles.icon,{left:EStyleSheet.value('13rem')}]}/>
+
         </View>
         <View style={styles.inputView}>
                <TextInput style={styles.input} placeholder='street address' placeholderTextColor='#7b8ea8'/>
@@ -176,7 +182,7 @@ const Textinputs3=
   <View>
     <Text style={styles.loginText}>Sign up</Text>
   </View>
-    <View style={{flex:1,flexDirection:'row',justifyContent:'space-evenly',marginLeft:'30%',marginTop:'10%'}}>
+    <View style={{flex:1,flexDirection:'row',justifyContent:'space-evenly',left:'4%',marginLeft:'30%',marginTop:'10%'}}>
     <Dot/>
     <Dot/>
     <Dot active={true}/>
@@ -189,21 +195,25 @@ const Textinputs3=
     <View style={styles.halfView}> 
            <View style={styles.halfpicker}>
                     <SelectInput
-                      value ={0}
-                      
+                      value ={this.state.month}
+                      onSubmitEditing={(value)=>{this.setState({month:value})}}
                       labelStyle={{color:'#7b8ea8'}}
                       options={month}
                       style={{}}
                     />
+                    <Image source={require('../Images/drop-down.png')} style={[styles.icon,{left:EStyleSheet.value('6rem')}]}/>
+
                 </View>
             <View style={styles.halfpicker}>
                     <SelectInput
-                      value ={0}
-                      
+                      value ={this.state.year}
+                      onSubmitEditing={(value)=>{this.setState({year:value})}}
                       labelStyle={{color:'#7b8ea8'}}
                       options={year}
                       style={{}}
                     />
+                    <Image source={require('../Images/drop-down.png')} style={[styles.icon,{left:EStyleSheet.value('6rem')}]}/>
+
             </View>
     </View>
     <View style={styles.inputView}>
@@ -265,7 +275,7 @@ return(
 
 const styles=EStyleSheet.create({
     icon:{
-        left:'3.5rem',top:'1.5rem',position:'absolute',height:'100%',width:'100%',resizeMode:'contain'
+        left:'5.5rem',top:'1.8rem',position:'absolute',height:'40%',width:'40%',resizeMode:'contain'
     },
     backroundImage:{
        width:width,

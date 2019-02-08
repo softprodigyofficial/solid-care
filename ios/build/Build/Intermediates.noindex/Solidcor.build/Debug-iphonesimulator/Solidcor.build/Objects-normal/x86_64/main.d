@@ -1,2 +1,2 @@
-dependencies: /Users/user/Desktop/New\ App/Solidcor/ios/Solidcor/main.m \
-  /Users/user/Desktop/New\ App/Solidcor/ios/Solidcor/AppDelegate.h
+dependencies: /Users/user/Desktop/agam/solid-care/ios/Solidcor/main.m \
+  /Users/user/Desktop/agam/solid-care/ios/Solidcor/AppDelegate.h

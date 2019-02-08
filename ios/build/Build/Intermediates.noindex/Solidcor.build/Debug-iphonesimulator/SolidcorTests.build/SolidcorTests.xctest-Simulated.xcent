@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>3UYP9Z74UD.org.reactjs.native.example.SolidcorTests</string>
+	<string>4Q92Z86L4P.org.reactjs.native.example.SolidcorTests</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>3UYP9Z74UD.org.reactjs.native.example.SolidcorTests</string>
+		<string>4Q92Z86L4P.org.reactjs.native.example.SolidcorTests</string>
 	</array>
 </dict>
 </plist>
